@@ -1,0 +1,194 @@
+/* manager.css */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 40px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+header h1 {
+    font-size: 36px;
+    color: #00e5ff;
+    margin: 0;
+}
+
+#linked-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.node {
+    display: flex;
+    align-items: center;
+    background: #16213e;
+    border: 1px solid #0f3460;
+    border-radius: 10px;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #e0e0e0;
+    transition: all 0.3s ease;
+    opacity: 0;
+    /* Start hidden for animation */
+    animation: fadeIn 0.5s ease-out forwards;
+    position: relative;
+}
+
+.node:hover {
+    transform: scale(1.03);
+    border-color: #00e5ff;
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+}
+
+.node-content {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.node-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+}
+
+.node-title {
+    font-size: 18px;
+}
+
+.node-connector {
+    position: absolute;
+    left: 31px;
+    /* Aligns with center of icon */
+    bottom: -15px;
+    width: 2px;
+    height: 15px;
+    background-color: #0f3460;
+}
+
+.node:last-child .node-connector {
+    display: none;
+}
+
+.tab-group {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #1f2940;
+    border-radius: 12px;
+    border: 1px solid #0f3460;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.tab-group-header {
+    font-size: 20px;
+    color: #00e5ff;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #0f3460;
+}
+
+.tab-group-header span {
+    font-size: 14px;
+    color: #e0e0e0;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+/* Add these styles to the end of manager.css */
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+}
+
+.fade-out {
+    animation: fadeOut 0.4s ease-out forwards;
+}
+
+/* Delete Group Button */
+.delete-group-btn {
+    background: #e53935;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    float: right;
+    /* Positions the button to the right of the header */
+}
+
+.delete-group-btn:hover {
+    background: #c62828;
+}
+
+/* Individual Tab (Node) Delete Button */
+.node {
+    position: relative;
+    /* Needed for positioning the child button */
+}
+
+.delete-node-btn {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #8a93a1;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    opacity: 0;
+    /* Hidden by default */
+    transition: opacity 0.2s, color 0.2s;
+}
+
+.node:hover .delete-node-btn {
+    opacity: 1;
+    /* Show on hover */
+}
+
+.delete-node-btn:hover {
+    color: #e53935;
+}
+
+/* Adjust node content to not overlap with the delete button */
+.node-content {
+    margin-right: 40px;
+}

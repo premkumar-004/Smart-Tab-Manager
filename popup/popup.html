@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TabLinkedList Control</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Tab Manager</h1>
+            <div class="switch-container">
+                <span id="view-title">Manage Tabs</span>
+                <label class="switch">
+                    <input type="checkbox" id="viewToggle">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </header>
+
+        <div class="view-flipper">
+            <div id="main-view" class="view">
+                <button id="consolidateBtn" class="action-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-zap">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                    </svg>
+                    Consolidate All Tabs
+                </button>
+                <div class="divider"></div>
+                <h2>Open Tabs</h2>
+                <p class="subtitle">Click to hibernate (deallocate) a tab.</p>
+                <ul id="tabsList">
+                </ul>
+            </div>
+
+            <div id="goto-view" class="view">
+                <h2>Go To Tab</h2>
+                <p class="subtitle">Click a tab to switch to it.</p>
+                <ul id="goToTabList">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
