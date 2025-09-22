@@ -8,13 +8,11 @@ Screenshots
 <td align="center"><strong>Go to Tab View</strong></td>
 </tr>
 <tr>
-<td><img width="477" height="724" alt="image" src="https://github.com/user-attachments/assets/8e34bc98-f5ca-4205-a545-af253ff9ea23" /></td>
-<td><img width="476" height="722" alt="image" src="https://github.com/user-attachments/assets/4d5889d0-aa5e-43a4-9a8d-45671d802519" />
+<td><img width="280" height="500" alt="image" src="https://github.com/user-attachments/assets/8e34bc98-f5ca-4205-a545-af253ff9ea23" /></td>
+<td><img width="280" height="500" alt="image" src="https://github.com/user-attachments/assets/4d5889d0-aa5e-43a4-9a8d-45671d802519" />
 </td>
 </tr>
 </table>
-
-Suggestion: Take screenshots of the two main views of your extension's popup, upload them to your repository or an image hosting site like Imgur, and replace the links above.
 
 ✨ Key Features
 Intelligent Consolidation: Save all your open tabs into a persistent, linked-list style manager. Each session is timestamped, so you'll never lose your work.
